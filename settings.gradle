@@ -1,0 +1,16 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        maven {
+            name 'nexus'
+            url "https://nexus.dotin.ir/nexus/content/groups/Core"
+            credentials {
+                username = 'core'
+                password = 'fcb@core'
+            }
+        }
+        mavenCentral()
+    }
+}
+
+rootProject.name = 'DemoApplication'

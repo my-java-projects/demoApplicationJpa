@@ -1,0 +1,79 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.3.3'
+	id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'org.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenLocal()
+	maven {
+		url 'https://nexus.dotin.ir/nexus/content/groups/Core'
+		credentials {
+			username = 'core'
+			password = 'fcb@core'
+		}
+	}
+	//mavenCentral()
+	// Add other repositories if needed
+}
+
+dependencies {
+	// Spring Boot Starter Web for RESTful API
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter'
+
+	// Spring Boot Starter Test for unit testing
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// Spring Boot Logging
+	implementation 'org.springframework.boot:spring-boot-starter-logging'
+
+	// Spring Boot Configuration Processor for processing configuration files
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+	// Spring Boot DevTools for development
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	// Springdoc OpenAPI UI for Swagger
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
+
+
+	// Oracle Connector Java
+	implementation 'com.oracle.database.jdbc:ojdbc8:19.8.0.0'
+
+	// Spring Data JPA
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// Hibernate
+	implementation 'org.hibernate.orm:hibernate-core:6.0.0.Final'
+	implementation 'org.hibernate.validator:hibernate-validator:6.2.3.Final'
+
+	// Jakarta Validation API
+	implementation 'jakarta.validation:jakarta.validation-api:3.0.0'
+
+	// lombok
+	implementation 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	// modelmapper
+	implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.1.1'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
