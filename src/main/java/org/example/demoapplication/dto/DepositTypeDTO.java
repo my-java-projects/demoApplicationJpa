@@ -15,4 +15,9 @@ public class DepositTypeDTO  implements Serializable {
     private String title;
     private String withdrawalTools;
     private Integer code;
+
+    public DepositTypeDTO(Integer code, String title) {
+        this.code = code;
+        this.title = title;
+    }
 }

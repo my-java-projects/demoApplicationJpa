@@ -14,6 +14,7 @@ public class DepositDTO {
     private Long id;
     private CustomerDTO customerDTO; // Reference to the customer
     private DepositTypeDTO depositTypeDTO; // Reference to the deposit type
+    private String depositNumber;
     private BigDecimal initialBalance;
     private BigDecimal withdrawableBalance;
     private LocalDateTime openingDate;
@@ -22,7 +23,7 @@ public class DepositDTO {
         this.customerDTO = customerDTO;
         this.depositTypeDTO = depositTypeDTO;
         this.initialBalance = initialBalance;
-        this.withdrawableBalance = initialBalance;
+        //this.withdrawableBalance = initialBalance;
         this.openingDate = LocalDateTime.now();
     }
 }

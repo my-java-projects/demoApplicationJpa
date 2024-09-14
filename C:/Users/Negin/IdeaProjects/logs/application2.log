@@ -1,74 +1,22 @@
-2024-09-11 11:09:13 [restartedMain] INFO  o.e.demoapplication.DemoApplication - Starting DemoApplication using Java 21.0.4 with PID 391122 (/home/n.shekari/projects/demoApplicationJpa/build/classes/java/main started by DOTIN\n.shekari in /home/n.shekari/projects/demoApplicationJpa)
-2024-09-11 11:09:13 [restartedMain] INFO  o.e.demoapplication.DemoApplication - No active profile set, falling back to 1 default profile: "default"
-2024-09-11 11:09:13 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-09-11 11:09:13 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-09-11 11:09:14 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-11 11:09:14 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73 ms. Found 3 JPA repository interfaces.
-2024-09-11 11:09:14 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-09-11 11:09:14 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-09-11 11:09:14 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
-2024-09-11 11:09:14 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-09-11 11:09:14 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1807 ms
-2024-09-11 11:09:15 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-11 11:09:15 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.0.0.Final
-2024-09-11 11:09:15 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-2024-09-11 11:09:15 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-09-11 11:09:17 [restartedMain] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
-java.sql.SQLException: Access denied for user 'root'@'localhost'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
-	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:100)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
-	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:216)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:137)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1350)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1421)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at org.example.demoapplication.DemoApplication.main(DemoApplication.java:14)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-2024-09-11 11:09:17 [restartedMain] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2024-09-11 11:09:17 [restartedMain] INFO  o.h.c.b.TypeSafeActivator - Error calling `jakarta.validation.Validation#buildDefaultValidatorFactory`
+2024-09-10 05:51:23 [restartedMain] INFO  o.e.d.DemoApplication2Application - Starting DemoApplication2Application using Java 21.0.4 with PID 8776 (C:\Users\Negin\IdeaProjects\DemoApplication2\build\classes\java\main started by Negin in C:\Users\Negin\IdeaProjects\DemoApplication2)
+2024-09-10 05:51:23 [restartedMain] INFO  o.e.d.DemoApplication2Application - No active profile set, falling back to 1 default profile: "default"
+2024-09-10 05:51:23 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-10 05:51:23 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-10 05:51:24 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-10 05:51:24 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 46 ms. Found 3 JPA repository interfaces.
+2024-09-10 05:51:24 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-09-10 05:51:24 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-10 05:51:24 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-10 05:51:24 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-10 05:51:24 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1196 ms
+2024-09-10 05:51:24 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-10 05:51:24 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.0.0.Final
+2024-09-10 05:51:25 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2024-09-10 05:51:25 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-10 05:51:25 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@10ab55f5
+2024-09-10 05:51:25 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-10 05:51:25 [restartedMain] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2024-09-10 05:51:25 [restartedMain] INFO  o.h.c.b.TypeSafeActivator - Error calling `jakarta.validation.Validation#buildDefaultValidatorFactory`
 jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
 	at jakarta.validation.Validation$GenericBootstrapImpl.configure(Validation.java:291)
 	at jakarta.validation.Validation.buildDefaultValidatorFactory(Validation.java:103)
@@ -101,22 +49,40 @@ jakarta.validation.NoProviderFoundException: Unable to create a Configuration, b
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at org.example.demoapplication.DemoApplication.main(DemoApplication.java:14)
+	at org.example.demoapplication2.DemoApplication2Application.main(DemoApplication2Application.java:14)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-2024-09-11 11:09:18 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-09-11 11:09:19 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1698, SQLState: 28000
-2024-09-11 11:09:19 [restartedMain] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost'
-2024-09-11 11:09:19 [restartedMain] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
-2024-09-11 11:09:19 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
-2024-09-11 11:09:19 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2024-09-11 11:09:19 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-09-11 11:09:19 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+2024-09-10 05:51:27 [restartedMain] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table deposit 
+       add constraint FK125vxvqlv5psqwt6kkayiu67v 
+       foreign key (deposit_type_id) 
+       references deposit_type (id)" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table deposit 
+       add constraint FK125vxvqlv5psqwt6kkayiu67v 
+       foreign key (deposit_type_id) 
+       references deposit_type (id)" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:587)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:532)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applyForeignKeys(AbstractSchemaMigrator.java:458)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:278)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:126)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:333)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1425)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
@@ -131,1007 +97,207 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at org.example.demoapplication.DemoApplication.main(DemoApplication.java:14)
+	at org.example.demoapplication2.DemoApplication2Application.main(DemoApplication2Application.java:14)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
-	... 18 common frames omitted
-Caused by: org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:61)
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:109)
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:95)
-	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:68)
-	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
-	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
-	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64)
-	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:558)
-	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
-	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:71)
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:225)
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:126)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:333)
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1425)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	... 22 common frames omitted
-Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost'
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`bankdb`.`#sql-1870_3c`, CONSTRAINT `FK125vxvqlv5psqwt6kkayiu67v` FOREIGN KEY (`deposit_type_id`) REFERENCES `deposit_type` (`id`))
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 37 common frames omitted
+2024-09-10 05:51:27 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-09-10 05:51:27 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-10 05:51:27 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-10 05:51:27 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 11 mappings in 'requestMappingHandlerMapping'
+2024-09-10 05:51:27 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-09-10 05:51:27 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-09-10 05:51:27 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-09-10 05:51:27 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-09-10 05:51:27 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-09-10 05:51:27 [restartedMain] INFO  o.e.d.DemoApplication2Application - Started DemoApplication2Application in 4.933 seconds (process running for 5.766)
+2024-09-10 05:51:57 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-10 05:51:57 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-09-10 05:51:57 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-09-10 05:51:57 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-09-10 05:51:57 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-09-10 05:51:57 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6e437002
+2024-09-10 05:51:57 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@26ff35f5
+2024-09-10 05:51:57 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-09-10 05:51:57 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-09-10 05:51:57 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/index.html", parameters={}
+2024-09-10 05:51:57 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-09-10 05:51:57 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-09-10 05:51:57 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui.css", parameters={}
+2024-09-10 05:51:57 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-09-10 05:51:57 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui-bundle.js", parameters={}
+2024-09-10 05:51:57 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/index.css", parameters={}
+2024-09-10 05:51:57 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-09-10 05:51:57 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-09-10 05:51:57 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-09-10 05:51:57 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-09-10 05:51:57 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-09-10 05:51:57 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-initializer.js", parameters={}
+2024-09-10 05:51:57 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui-standalone-preset.js", parameters={}
+2024-09-10 05:51:57 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-09-10 05:51:57 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-09-10 05:51:57 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-09-10 05:51:57 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-09-10 05:51:58 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/v3/api-docs/swagger-config", parameters={}
+2024-09-10 05:51:58 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2024-09-10 05:51:58 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+2024-09-10 05:51:58 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:8080/swagger-ui/oauth2-re (truncated)...]
+2024-09-10 05:51:58 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-09-10 05:51:58 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/v3/api-docs", parameters={}
+2024-09-10 05:51:58 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2024-09-10 05:51:58 [http-nio-8080-exec-8] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 295 ms
+2024-09-10 05:51:58 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, */*] and supported [application/json]
+2024-09-10 05:51:58 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 48, 46, 49, 34, 44, 34, 105, 110, 10 (truncated)...]
+2024-09-10 05:51:58 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-09-10 05:52:16 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/deposit-types", parameters={}
+2024-09-10 05:52:16 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.example.demoapplication2.controller.DepositTypeController#createDepositType(DepositType)
+2024-09-10 05:52:16 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [DepositType(id=null, title=string, depositTools=string, code=null, deposits=[])]
+2024-09-10 05:52:16 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-09-10 05:52:16 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing ["Deposit Type created with Code: 690"]
+2024-09-10 05:52:16 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-09-10 05:52:32 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/deposit-types/1", parameters={}
+2024-09-10 05:52:32 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.example.demoapplication2.controller.DepositTypeController#getDepositTypeById(Long)
+2024-09-10 05:52:32 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-09-10 05:52:32 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [java.lang.StackOverflowError]
+2024-09-10 05:52:32 [http-nio-8080-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2024-09-10 05:52:32 [http-nio-8080-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2024-09-10 05:52:32 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-09-10 05:53:00 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/customers", parameters={}
+2024-09-10 05:53:00 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.example.demoapplication2.controller.CustomerController#createCustomer(Customer)
+2024-09-10 05:53:00 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [Customer(id=null, nationalId=543535453454, firstName=string, lastName=string, fathersName=string, ci (truncated)...]
+2024-09-10 05:53:00 [http-nio-8080-exec-4] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1364, SQLState: HY000
+2024-09-10 05:53:00 [http-nio-8080-exec-4] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Field 'customerNumber' doesn't have a default value
+2024-09-10 05:53:00 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Failed to complete request: org.springframework.orm.jpa.JpaSystemException: could not execute statement
+2024-09-10 05:53:00 [http-nio-8080-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.orm.jpa.JpaSystemException: could not execute statement] with root cause
+java.sql.SQLException: Field 'customerNumber' doesn't have a default value
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
-	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
-	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:41)
-	... 40 common frames omitted
-2024-09-11T11:13:57.396+03:30  INFO 391815 --- [DemoApplication] [restartedMain] o.e.demoapplication.DemoApplication      : Starting DemoApplication using Java 21.0.4 with PID 391815 (/home/n.shekari/projects/demoApplicationJpa/build/classes/java/main started by DOTIN\n.shekari in /home/n.shekari/projects/demoApplicationJpa)
-2024-09-11T11:13:57.402+03:30  INFO 391815 --- [DemoApplication] [restartedMain] o.e.demoapplication.DemoApplication      : No active profile set, falling back to 1 default profile: "default"
-2024-09-11T11:13:57.518+03:30  INFO 391815 --- [DemoApplication] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in /home/n.shekari/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/19.8.0.0/df9cff9b91c47d06b9a0482d566ee2d83a03e586/ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/home/n.shekari/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/19.8.0.0/df9cff9b91c47d06b9a0482d566ee2d83a03e586/oraclepki.jar
-2024-09-11T11:13:57.519+03:30  INFO 391815 --- [DemoApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-09-11T11:13:57.519+03:30  INFO 391815 --- [DemoApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-09-11T11:13:59.141+03:30  INFO 391815 --- [DemoApplication] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-11T11:13:59.262+03:30  INFO 391815 --- [DemoApplication] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104 ms. Found 3 JPA repository interfaces.
-2024-09-11T11:14:00.330+03:30  INFO 391815 --- [DemoApplication] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-09-11T11:14:00.353+03:30  INFO 391815 --- [DemoApplication] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-09-11T11:14:00.354+03:30  INFO 391815 --- [DemoApplication] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2024-09-11T11:14:00.440+03:30  INFO 391815 --- [DemoApplication] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-09-11T11:14:00.441+03:30  INFO 391815 --- [DemoApplication] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2921 ms
-2024-09-11T11:14:00.782+03:30  INFO 391815 --- [DemoApplication] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-11T11:14:00.843+03:30  INFO 391815 --- [DemoApplication] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.0.0.Final
-2024-09-11T11:14:01.101+03:30  WARN 391815 --- [DemoApplication] [restartedMain] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-2024-09-11T11:14:01.308+03:30  INFO 391815 --- [DemoApplication] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-09-11T11:14:01.318+03:30  WARN 391815 --- [DemoApplication] [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-2024-09-11T11:14:01.737+03:30  INFO 391815 --- [DemoApplication] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@357807a7
-2024-09-11T11:14:01.744+03:30  INFO 391815 --- [DemoApplication] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-09-11T11:14:01.913+03:30  INFO 391815 --- [DemoApplication] [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2024-09-11T11:14:02.379+03:30  INFO 391815 --- [DemoApplication] [restartedMain] o.h.c.beanvalidation.TypeSafeActivator   : Error calling `jakarta.validation.Validation#buildDefaultValidatorFactory`
-
-jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-	at jakarta.validation.Validation$GenericBootstrapImpl.configure(Validation.java:291) ~[jakarta.validation-api-3.0.2.jar:na]
-	at jakarta.validation.Validation.buildDefaultValidatorFactory(Validation.java:103) ~[jakarta.validation-api-3.0.2.jar:na]
-	at org.hibernate.cfg.beanvalidation.TypeSafeActivator.getValidatorFactory(TypeSafeActivator.java:479) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.cfg.beanvalidation.TypeSafeActivator.activate(TypeSafeActivator.java:82) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.hibernate.cfg.beanvalidation.BeanValidationIntegrator.integrate(BeanValidationIntegrator.java:137) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:284) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1425) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.example.demoapplication.DemoApplication.main(DemoApplication.java:14) ~[main/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
-
-2024-09-11T11:14:41.678+03:30  WARN 391815 --- [DemoApplication] [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
-    alter table ng_customer 
-       add column city_of_birth varchar(255)" via JDBC Statement
-
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
-    alter table ng_customer 
-       add column city_of_birth varchar(255)" via JDBC Statement
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:587) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:608) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.migrateTable(AbstractSchemaMigrator.java:325) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:83) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:225) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:126) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:333) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1425) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.example.demoapplication.DemoApplication.main(DemoApplication.java:14) ~[main/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
-Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: : invalid identifier
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:553) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:269) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:229) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:41) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:928) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1823) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1778) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:303) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:na]
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	... 38 common frames omitted
-Caused by: oracle.jdbc.OracleDatabaseException: ORA-00904: : invalid identifier
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	... 53 common frames omitted
-
-2024-09-11T11:14:41.686+03:30  WARN 391815 --- [DemoApplication] [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
-    alter table ng_customer 
-       add column customer_number varchar(255) not null" via JDBC Statement
-
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
-    alter table ng_customer 
-       add column customer_number varchar(255) not null" via JDBC Statement
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:587) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:608) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.migrateTable(AbstractSchemaMigrator.java:325) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:83) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:225) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:126) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:333) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1425) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.example.demoapplication.DemoApplication.main(DemoApplication.java:14) ~[main/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
-Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: : invalid identifier
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:553) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:269) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:229) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:41) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:928) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1823) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1778) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:303) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:na]
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	... 38 common frames omitted
-Caused by: oracle.jdbc.OracleDatabaseException: ORA-00904: : invalid identifier
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	... 53 common frames omitted
-
-2024-09-11T11:14:41.692+03:30  WARN 391815 --- [DemoApplication] [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
-    alter table ng_customer 
-       add column fathers_name varchar(255)" via JDBC Statement
-
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
-    alter table ng_customer 
-       add column fathers_name varchar(255)" via JDBC Statement
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:587) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:608) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.migrateTable(AbstractSchemaMigrator.java:325) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:83) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:225) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:126) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:333) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1425) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.example.demoapplication.DemoApplication.main(DemoApplication.java:14) ~[main/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
-Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: : invalid identifier
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:553) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:269) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:229) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:41) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:928) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1823) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1778) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:303) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:na]
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	... 38 common frames omitted
-Caused by: oracle.jdbc.OracleDatabaseException: ORA-00904: : invalid identifier
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	... 53 common frames omitted
-
-2024-09-11T11:14:41.695+03:30  WARN 391815 --- [DemoApplication] [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
-    alter table ng_customer 
-       add column first_name varchar(255)" via JDBC Statement
-
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
-    alter table ng_customer 
-       add column first_name varchar(255)" via JDBC Statement
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:587) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:608) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.migrateTable(AbstractSchemaMigrator.java:325) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:83) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:225) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:126) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:333) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1425) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.example.demoapplication.DemoApplication.main(DemoApplication.java:14) ~[main/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
-Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: : invalid identifier
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:553) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:269) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:229) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:41) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:928) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1823) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1778) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:303) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:na]
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	... 38 common frames omitted
-Caused by: oracle.jdbc.OracleDatabaseException: ORA-00904: : invalid identifier
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	... 53 common frames omitted
-
-2024-09-11T11:14:41.699+03:30  WARN 391815 --- [DemoApplication] [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
-    alter table ng_customer 
-       add column last_name varchar(255)" via JDBC Statement
-
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
-    alter table ng_customer 
-       add column last_name varchar(255)" via JDBC Statement
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:587) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:608) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.migrateTable(AbstractSchemaMigrator.java:325) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:83) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:225) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:126) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:333) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1425) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.example.demoapplication.DemoApplication.main(DemoApplication.java:14) ~[main/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
-Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: : invalid identifier
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:553) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:269) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:229) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:41) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:928) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1823) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1778) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:303) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:na]
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	... 38 common frames omitted
-Caused by: oracle.jdbc.OracleDatabaseException: ORA-00904: : invalid identifier
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	... 53 common frames omitted
-
-2024-09-11T11:14:41.706+03:30  WARN 391815 --- [DemoApplication] [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
-    alter table ng_customer 
-       add column national_id varchar(255) not null" via JDBC Statement
-
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
-    alter table ng_customer 
-       add column national_id varchar(255) not null" via JDBC Statement
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:587) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:608) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.migrateTable(AbstractSchemaMigrator.java:325) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:83) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:225) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:126) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:333) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1425) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.example.demoapplication.DemoApplication.main(DemoApplication.java:14) ~[main/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
-Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: : invalid identifier
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:553) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:269) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:229) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:41) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:928) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1823) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1778) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:303) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:na]
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	... 38 common frames omitted
-Caused by: oracle.jdbc.OracleDatabaseException: ORA-00904: : invalid identifier
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	... 53 common frames omitted
-
-2024-09-11T11:14:41.710+03:30  WARN 391815 --- [DemoApplication] [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
-    alter table ng_customer 
-       add column phone_number varchar(255)" via JDBC Statement
-
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
-    alter table ng_customer 
-       add column phone_number varchar(255)" via JDBC Statement
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:587) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:608) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.migrateTable(AbstractSchemaMigrator.java:325) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:83) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:225) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:126) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:333) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1425) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.example.demoapplication.DemoApplication.main(DemoApplication.java:14) ~[main/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
-Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: : invalid identifier
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:553) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:269) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:229) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:41) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:928) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1823) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1778) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:303) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:na]
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	... 38 common frames omitted
-Caused by: oracle.jdbc.OracleDatabaseException: ORA-00904: : invalid identifier
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	... 53 common frames omitted
-
-2024-09-11T11:14:41.716+03:30  WARN 391815 --- [DemoApplication] [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
-    alter table ng_deposit 
-       add column initial_balance decimal(38,2)" via JDBC Statement
-
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
-    alter table ng_deposit 
-       add column initial_balance decimal(38,2)" via JDBC Statement
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:587) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:608) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.migrateTable(AbstractSchemaMigrator.java:325) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:83) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:225) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:126) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:333) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1425) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.example.demoapplication.DemoApplication.main(DemoApplication.java:14) ~[main/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
-Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: : invalid identifier
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:553) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:269) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:229) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:41) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:928) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1823) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1778) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:303) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:na]
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	... 38 common frames omitted
-Caused by: oracle.jdbc.OracleDatabaseException: ORA-00904: : invalid identifier
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	... 53 common frames omitted
-
-2024-09-11T11:14:41.722+03:30  WARN 391815 --- [DemoApplication] [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
-    alter table ng_deposit 
-       add column opening_date datetime(6)" via JDBC Statement
-
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
-    alter table ng_deposit 
-       add column opening_date datetime(6)" via JDBC Statement
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:587) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:608) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.migrateTable(AbstractSchemaMigrator.java:325) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:83) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:225) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:126) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:333) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1425) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.example.demoapplication.DemoApplication.main(DemoApplication.java:14) ~[main/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
-Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: : invalid identifier
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:553) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:269) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:229) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:41) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:928) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1823) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1778) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:303) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:na]
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	... 38 common frames omitted
-Caused by: oracle.jdbc.OracleDatabaseException: ORA-00904: : invalid identifier
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	... 53 common frames omitted
-
-2024-09-11T11:14:41.731+03:30  WARN 391815 --- [DemoApplication] [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
-    alter table ng_deposit 
-       add column withdrawable_balance decimal(38,2)" via JDBC Statement
-
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
-    alter table ng_deposit 
-       add column withdrawable_balance decimal(38,2)" via JDBC Statement
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:587) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:608) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.migrateTable(AbstractSchemaMigrator.java:325) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:83) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:225) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:126) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:333) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1425) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.example.demoapplication.DemoApplication.main(DemoApplication.java:14) ~[main/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
-Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: : invalid identifier
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:553) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:269) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:229) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:41) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:928) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1823) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1778) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:303) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:na]
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	... 38 common frames omitted
-Caused by: oracle.jdbc.OracleDatabaseException: ORA-00904: : invalid identifier
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	... 53 common frames omitted
-
-2024-09-11T11:14:41.736+03:30  WARN 391815 --- [DemoApplication] [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
-    alter table ng_deposittype 
-       add column withdrawal_tools varchar(255) not null" via JDBC Statement
-
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
-    alter table ng_deposittype 
-       add column withdrawal_tools varchar(255) not null" via JDBC Statement
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:587) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:608) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.migrateTable(AbstractSchemaMigrator.java:325) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:83) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:225) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:126) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:333) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1425) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.example.demoapplication.DemoApplication.main(DemoApplication.java:14) ~[main/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
-Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: : invalid identifier
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:553) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:269) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:229) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:41) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:928) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1823) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1778) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:303) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:na]
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	... 38 common frames omitted
-Caused by: oracle.jdbc.OracleDatabaseException: ORA-00904: : invalid identifier
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	... 53 common frames omitted
-
-2024-09-11T11:14:46.098+03:30  WARN 391815 --- [DemoApplication] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 911, SQLState: 22019
-2024-09-11T11:14:46.101+03:30 ERROR 391815 --- [DemoApplication] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : ORA-00911: invalid character
-
-2024-09-11T11:14:46.112+03:30 ERROR 391815 --- [DemoApplication] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Error accessing column metadata: FBPLATFORM.NG_CUSTOMER
-2024-09-11T11:14:46.115+03:30  WARN 391815 --- [DemoApplication] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Error accessing column metadata: FBPLATFORM.NG_CUSTOMER
-2024-09-11T11:14:46.119+03:30  INFO 391815 --- [DemoApplication] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-09-11T11:14:46.167+03:30  INFO 391815 --- [DemoApplication] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-09-11T11:14:46.171+03:30  INFO 391815 --- [DemoApplication] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2024-09-11T11:14:46.189+03:30  INFO 391815 --- [DemoApplication] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-09-11T11:14:46.215+03:30 ERROR 391815 --- [DemoApplication] [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Error accessing column metadata: FBPLATFORM.NG_CUSTOMER
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.example.demoapplication.DemoApplication.main(DemoApplication.java:14) ~[main/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
-Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Error accessing column metadata: FBPLATFORM.NG_CUSTOMER
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.12.jar:6.1.12]
-	... 18 common frames omitted
-Caused by: org.hibernate.exception.SQLGrammarException: Error accessing column metadata: FBPLATFORM.NG_CUSTOMER
-	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:64) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:109) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:95) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.convertSQLException(AbstractInformationExtractorImpl.java:118) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.addColumns(InformationExtractorJdbcDatabaseMetaDataImpl.java:172) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.extractTableInformation(AbstractInformationExtractorImpl.java:843) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.lambda$locateTableInNamespace$5(AbstractInformationExtractorImpl.java:797) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:69) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.locateTableInNamespace(AbstractInformationExtractorImpl.java:792) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTable(AbstractInformationExtractorImpl.java:349) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTableInformation(DatabaseInformationImpl.java:113) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.locateTableInformation(DatabaseInformationImpl.java:151) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.lambda$getForeignKeys$9(AbstractInformationExtractorImpl.java:1297) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processImportedKeysResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:132) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getForeignKeys(AbstractInformationExtractorImpl.java:1276) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.extract.internal.TableInformationImpl.foreignKeys(TableInformationImpl.java:97) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.extract.internal.TableInformationImpl.getForeignKeys(TableInformationImpl.java:91) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.equivalentForeignKeyExistsInDatabase(AbstractSchemaMigrator.java:506) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.checkForExistingForeignKey(AbstractSchemaMigrator.java:491) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applyForeignKeys(AbstractSchemaMigrator.java:448) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:278) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:126) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:333) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1425) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.12.jar:6.1.12]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.12.jar:6.1.12]
-	... 22 common frames omitted
-Caused by: java.sql.SQLSyntaxErrorException: ORA-00911: invalid character
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:553) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:269) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:270) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:91) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:807) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:983) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1168) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3666) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1426) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3713) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1167) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java) ~[HikariCP-5.1.0.jar:na]
-	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:49) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.addColumns(InformationExtractorJdbcDatabaseMetaDataImpl.java:147) ~[hibernate-core-6.0.0.Final.jar:6.0.0.Final]
-	... 49 common frames omitted
-Caused by: oracle.jdbc.OracleDatabaseException: ORA-00911: invalid character
-
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513) ~[ojdbc8-19.8.0.0.jar:19.8.0.0.0]
-	... 67 common frames omitted
-
-2024-09-11T11:17:07.697+03:30  INFO 392644 --- [DemoApplication] [restartedMain] o.e.demoapplication.DemoApplication      : Starting DemoApplication using Java 21.0.4 with PID 392644 (/home/n.shekari/projects/demoApplicationJpa/build/classes/java/main started by DOTIN\n.shekari in /home/n.shekari/projects/demoApplicationJpa)
-2024-09-11T11:17:07.700+03:30  INFO 392644 --- [DemoApplication] [restartedMain] o.e.demoapplication.DemoApplication      : No active profile set, falling back to 1 default profile: "default"
-2024-09-11T11:17:07.801+03:30  INFO 392644 --- [DemoApplication] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in /home/n.shekari/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/19.8.0.0/df9cff9b91c47d06b9a0482d566ee2d83a03e586/ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/home/n.shekari/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/19.8.0.0/df9cff9b91c47d06b9a0482d566ee2d83a03e586/oraclepki.jar
-2024-09-11T11:17:07.802+03:30  INFO 392644 --- [DemoApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-09-11T11:17:07.802+03:30  INFO 392644 --- [DemoApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-09-11T11:17:09.003+03:30  INFO 392644 --- [DemoApplication] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-11T11:17:09.107+03:30  INFO 392644 --- [DemoApplication] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89 ms. Found 3 JPA repository interfaces.
-2024-09-11T11:17:10.009+03:30  INFO 392644 --- [DemoApplication] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-09-11T11:17:10.030+03:30  INFO 392644 --- [DemoApplication] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-09-11T11:17:10.032+03:30  INFO 392644 --- [DemoApplication] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2024-09-11T11:17:10.088+03:30  INFO 392644 --- [DemoApplication] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-09-11T11:17:10.090+03:30  INFO 392644 --- [DemoApplication] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2286 ms
-2024-09-11T11:17:10.367+03:30  INFO 392644 --- [DemoApplication] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-11T11:17:10.428+03:30  INFO 392644 --- [DemoApplication] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.0.0.Final
-2024-09-11T11:17:10.653+03:30  WARN 392644 --- [DemoApplication] [restartedMain] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-2024-09-11T11:17:10.829+03:30  INFO 392644 --- [DemoApplication] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-09-11T11:17:10.836+03:30  WARN 392644 --- [DemoApplication] [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-2024-09-11T11:17:11.210+03:30  INFO 392644 --- [DemoApplication] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@44424822
-2024-09-11T11:17:11.213+03:30  INFO 392644 --- [DemoApplication] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-09-11T11:17:11.359+03:30  INFO 392644 --- [DemoApplication] [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1054)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1003)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1312)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:988)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:42)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3276)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3886)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:80)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:653)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:283)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:264)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:340)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:286)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:192)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:122)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:184)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:129)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:53)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:732)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:716)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364)
+	at jdk.proxy4/jdk.proxy4.$Proxy121.persist(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:319)
+	at jdk.proxy4/jdk.proxy4.$Proxy121.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:625)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:173)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:148)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy4/jdk.proxy4.$Proxy125.save(Unknown Source)
+	at org.example.demoapplication2.service.CustomerService.createCustomer(CustomerService.java:24)
+	at org.example.demoapplication2.controller.CustomerController.createCustomer(CustomerController.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-09-10 05:53:00 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for POST "/error", parameters={}
+2024-09-10 05:53:00 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-09-10 05:53:00 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-09-10 05:53:00 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Tue Sep 10 05:53:00 IRST 2024, status=500, error=Internal Server Error, trace=org.springf (truncated)...]
+2024-09-10 05:53:00 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 500
+2024-09-10 05:53:33 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-10 05:53:33 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-10 05:53:33 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

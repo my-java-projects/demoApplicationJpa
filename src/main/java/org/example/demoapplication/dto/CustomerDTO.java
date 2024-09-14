@@ -21,4 +21,9 @@ public class CustomerDTO implements Serializable{
     private String cityOfBirth;
     private String phoneNumber;
     private List<DepositDTO> deposits;
+
+    public CustomerDTO(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 }

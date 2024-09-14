@@ -22,6 +22,7 @@ public class Deposit {
     @JoinColumn(name = "deposit_type_id", nullable = false)
     private DepositType depositType;
 
+    private String depositNumber;
     private BigDecimal initialBalance;   // BigDecimal for monetary values
     private BigDecimal withdrawableBalance;
     private LocalDateTime openingDate;

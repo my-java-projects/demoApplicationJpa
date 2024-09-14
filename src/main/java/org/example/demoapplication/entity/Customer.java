@@ -30,6 +30,7 @@ public class Customer {
 
     // One customer can have multiple deposits
     @OneToMany(mappedBy = "customer", fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    @ToString.Exclude  // Exclude this field from toString to avoid circular reference
     private List<Deposit> deposits;
 
 }

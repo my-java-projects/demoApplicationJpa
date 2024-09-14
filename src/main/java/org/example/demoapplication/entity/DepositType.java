@@ -26,5 +26,6 @@ public class DepositType {
 
     // One deposit type can be used by multiple deposits
     @OneToMany(mappedBy = "depositType",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ToString.Exclude  // Exclude this field from toString to avoid circular reference
     private List<Deposit> deposits;
 }
